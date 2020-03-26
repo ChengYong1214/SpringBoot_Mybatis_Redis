@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>操作</title>
+</head>
+<body>
+<table border="1" style="text-align: center">
+    <tr>
+        <td>序号</td>
+        <td>ID</td>
+        <td>账号</td>
+        <td>密码</td>
+        <td>修改操作</td>
+        <td>删除操作</td>
+    </tr>
+    <tr th:each="u,uStar: ${userList}">
+        <td th:text="${uStar.index}"></td>
+        <td th:text="${u.id}"></td>
+        <td th:text="${u.username}"></td>
+        <td th:text="${u.password}"></td>
+        <td><a th:href="@{/updateUserById/{id}(id=${u.id})}">修改</a></td>
+        <td><a th:href="@{/deleteUserById/{id}(id=${u.id})}">删除</a></td>
+    </tr>
+</table>
+</body>
+</html>

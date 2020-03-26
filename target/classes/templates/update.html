@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>更新</title>
+</head>
+<body>
+<title>更新-></title><br>
+
+<form method="post" action="/updateUser">
+    ID:<input name="id" th:value="${user.id}"/>
+    姓名：<input name="username" th:value="${user.username}"/>
+    密码：<input name="password" th:value="${user.password}"/>
+    <input type="submit" value="添加"/>
+</form>
+</body>
+</html>
