@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
     @Autowired
     private UserDao userDao;
+
     @Test
     void contextLoads() {
         User user=new User();

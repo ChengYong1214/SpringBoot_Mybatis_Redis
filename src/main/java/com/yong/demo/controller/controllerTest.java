@@ -28,6 +28,7 @@ public class controllerTest {
         return "operation";
     }
 
+
     @RequestMapping("/selectAllUsers")
     @ResponseBody
     public List<User> selectAllUsers(){

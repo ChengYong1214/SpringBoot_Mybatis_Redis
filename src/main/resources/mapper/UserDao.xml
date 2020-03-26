@@ -12,6 +12,7 @@
     <delete id="deleteUserById" parameterType="java.lang.Integer">
         delete from user where id=#{id}
     </delete>
+
     <insert id="insertUser" parameterType="com.yong.demo.pojo.User">
         insert into user (username,password)value (#{username},#{password})
     </insert>
